@@ -195,7 +195,7 @@
 id | string | Идентификатор вакансии
 description | string | Описание вакансии, содержит html
 branded_description | string или null | [Брендированное описание вакансии](#branded_description)
-key_skills | array | Информация о ключевых навыках, заявленных в вакансии. Список может быть пустым.
+key_skills | array | Информация о ключевых навыках, заявленных в вакансии. Список может быть пустым
 key_skills[].name | string | название ключевого навыка
 schedule | object | График работы. Элемент справочника [schedule](dictionaries.md)
 schedule.id | string | Идентификатор графика работы
@@ -209,17 +209,17 @@ address | object или null | [Адрес вакансии](address.md#Адре
 alternate_url | string | Ссылка на представление вакансии на сайте
 apply_alternate_url | string | Ссылка на отклик на вакансию на сайте
 code | string или null | Внутренний код вакансии работадателя
-department | object или null | Департамент, от имени которого размещается вакансия (если данная возможность доступна для компании). Работодатели могут запросить [справочник департаментов](employer_departments.md).
+department | object или null | Департамент, от имени которого размещается вакансия (если данная возможность доступна для компании). Работодатели могут запросить [справочник департаментов](employer_departments.md)
 department.id | string | Идентификатор департамента
 department.name | string | Название департамента
-employment | object или null | Тип занятости. Элемент справочника [employment](dictionaries.md).
+employment | object или null | Тип занятости. Элемент справочника [employment](dictionaries.md)
 employment.id | string | Идентификатор типа занятости
 employment.name | string | Название типа занятости
 salary | object или null | Оклад
 salary.from | number или null | Нижняя граница вилки оклада
 salary.to | number или null | Верняя граница вилки оклада
-salary.gross | boolean или null | Признак того что оклад указан до вычета налогов. В случае если не указано - null.
-salary.currency | string | Идентификатор валюты оклада (справочник [currency](dictionaries.md)).
+salary.gross | boolean или null | Признак того что оклад указан до вычета налогов. В случае если не указано - null
+salary.currency | string | Идентификатор валюты оклада (справочник [currency](dictionaries.md))
 archived | boolean | Находится ли данная вакансия в архиве
 name | string | Название вакансии
 area | object | Регион размещения вакансии
@@ -227,29 +227,29 @@ area.id | string | Идентификатор региона
 area.name | string | Название региона
 area.url | string | Url получения информации о регионе
 published_at | string | Дата и время публикации вакансии
-employer | object | Короткое представление работодателя. Описание полей смотрите в [информации о работодателе](employers.md#item).
+employer | object | Короткое представление работодателя. Описание полей смотрите в [информации о работодателе](employers.md#item)
 employer.blacklisted | boolean | Добавлены ли все вакансии работодателя в [список скрытых](blacklisted.md#employers)
 response_letter_required | boolean | Обязательно ли заполнять сообщение при отклике на вакансию
-type | object | Тип вакансии. Элемент справочника [vacancy_type](dictionaries.md).
+type | object | Тип вакансии. Элемент справочника [vacancy_type](dictionaries.md)
 type.id | string | Идентификатор типа вакансии
 type.name | string | Название типа вакансии
-response_url | string или null | На вакансии с типом `direct` нельзя откликнуться на сайте hh.ru, у этих вакансий в ключе `response_url` выдаётся URL внешнего сайта (чаще всего это сайт работодателя с формой отклика).
+response_url | string или null | На вакансии с типом `direct` нельзя откликнуться на сайте hh.ru, у этих вакансий в ключе `response_url` выдаётся URL внешнего сайта (чаще всего это сайт работодателя с формой отклика)
 test | object или null | Информация о прикрепленном тестовом задании к вакансии. В случае отсутствия теста — `null`. **В данный момент отклик на вакансии с обязательным тестом через API невозможен.**
 test.required | boolean | Обязательно ли заполнение теста для отклика
-specialization | array | Специализации. Элементы справочника [specializations](specializations.md)
+specializations | array | Специализации. Элементы справочника [specializations](specializations.md)
 specializations[].id | string | Идентификатор специализации
 specializations[].name | string | Название специализации
 specializations[].profarea_id | string | Идентификатор профессиональной области, в которую входит специализация
 specializations[].profarea_name | string | Название профессиональной области, в которую входит специализация
-contacts | object или null | Контактная информация. В вакансиях, где контакты не указаны, возвращается `null`.
+contacts | object или null | Контактная информация. В вакансиях, где контакты не указаны, возвращается `null`
 contacts.name | string или null | Имя контактного лица
 contacts.email | string или null | Email контактного лица
-contacts.phones | array | Список телефонов контактного лица. Может быть пустым.
+contacts.phones | array | Список телефонов контактного лица. Может быть пустым
 contacts.phones[].country | string | Код страны
 contacts.phones[].city | string | Код города
 contacts.phones[].number | string | Номер телефона
 contacts.phones[].comment | string или null | Комментарий
-billing_type | object | Биллинговый тип вакансии. Элемент справочника [vacancy_billing_type](dictionaries.md).
+billing_type | object | Биллинговый тип вакансии. Элемент справочника [vacancy_billing_type](dictionaries.md)
 billing_type.id | string | Идентификатор биллингового типа вакансии
 billing_type.name | string | Название биллингового типа вакансии
 allow_messages | boolean | Включена ли возможность соискателю писать сообщения работодателю, после приглашения/отклика на вакансию
@@ -298,8 +298,8 @@ javascript. При этом:
 
 Поле | Тип | Описание
 ---- | --- | --------
-relations | array | При авторизации соискателем, возвращает связи с вакансией. Значения из [справочника vacancy_relation](dictionaries.md).
-negotiations_url | string | ссылка для получения списка откликов/приглашений
+relations | array | При авторизации соискателем, возвращает связи с вакансией. Значения из [справочника vacancy_relation](dictionaries.md)
+negotiations_url | string | Ссылка для получения списка откликов/приглашений
 
 Смотрите также [отклики на вакансии](negotiations.md#post_negotiation).
 
@@ -326,11 +326,11 @@ negotiations_url | string | ссылка для получения списка 
 }
 ```
 
-ключ | тип | описание
+Ключ | Тип | Описание
 ---- | --- | --------
-expires_at | строка | дата и время окончания публикации вакансии
-response_notifications | логический | уведомлять ли менеджера о новых откликах
-hidden | логический | удалена ли вакансия (скрыта из архива)
+expires_at | строка | Дата и время окончания публикации вакансии
+response_notifications | логический | Уведомлять ли менеджера о новых откликах
+hidden | логический | Удалена ли вакансия (скрыта из архива)
 can_upgrade_billing_type | логический | Можно ли улучшить биллинговый тип вакансии
 
 В объекте `manager` — информация о менеджере, который разместил данную вакансию.
@@ -368,13 +368,13 @@ can_upgrade_billing_type | логический | Можно ли улучшит
 }
 ```
 
-ключ | тип | описание
+Ключ | Тип | Описание
 ---- | --- | --------
-counters.views | number | количество просмотров вакансии
-counters.responses | number | количество откликов на вакансию
-counters.unread_responses | number | количество непросмотренных откликов на вакансию
-counters.resumes_in_progress | number | количество резюме в работе на вакансию
-counters.invitations | number | количество приглашений на вакансию
+counters.views | number | Количество просмотров вакансии
+counters.responses | number | Количество откликов на вакансию
+counters.unread_responses | number | Количество непросмотренных откликов на вакансию
+counters.resumes_in_progress | number | Количество резюме в работе на вакансию
+counters.invitations | number | Количество приглашений на вакансию
 
 
 <a name="favorited"></a>
@@ -383,7 +383,7 @@ counters.invitations | number | количество приглашений на
 Данные методы требуют авторизации соискателем, иначе вернут `403 Forbidden`.
 
 `GET /vacancies/favorited` - возвращает подмножество вакансий, добавленных
-пользователем в отобранные.  Пейджинг работает по стандартным page&per_page,
+пользователем в отобранные. Пейджинг работает по стандартным page&per_page,
 страницы нумеруются с нуля.
 
 `PUT /vacancies/favorited/{vacancy_id}` добавит указанную вакансию в список.
@@ -617,12 +617,12 @@ counters.invitations | number | количество приглашений на
 
 Где помимо [стандартных полей вакансии](#nano) вернутся дополнительные поля:
 
-ключ | тип | описание
+Ключ | Тип | Описание
 ---- |---- |---------
 sort_point_distance | число, null | Расстояние в метрах между центром сортировки (заданной параметрами `sort_point_lat`, `sort_point_lng`) и указанным в вакансии адресом. В случае, если в адресе указаны только станции метро, выдается расстояние между центром сортировки и средней геометрической точкой указанных станций. Значение `sort_point_distance` выдается только в случае, если заданы параметры `sort_point_lat`, `sort_point_lng`, `order_by=distance`
-snippet | объект | Дополнительные текстовые снипеты по найденной вакансии. Если в тексте снипета встретилась поисковая фраза (параметр `text`), она будет подсвечена тегом `highlighttext`.
-snippet.requirement | строка, null | Требования по вакансии, если они найдены в тексте описания.
-snippet.responsibility | строка, null | Обязанности по вакансии, если они найдены в тексте описания.
+snippet | объект | Дополнительные текстовые снипеты по найденной вакансии. Если в тексте снипета встретилась поисковая фраза (параметр `text`), она будет подсвечена тегом `highlighttext`
+snippet.requirement | строка, null | Требования по вакансии, если они найдены в тексте описания
+snippet.responsibility | строка, null | Обязанности по вакансии, если они найдены в тексте описания
 
 
 Также возможен возврат
