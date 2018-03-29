@@ -196,7 +196,7 @@ id | string | Идентификатор вакансии
 description | string | Описание вакансии, содержит html
 branded_description | string или null | [Брендированное описание вакансии](#branded_description)
 key_skills | array | Информация о ключевых навыках, заявленных в вакансии. Список может быть пустым
-key_skills[].name | string | название ключевого навыка
+key_skills[].name | string | Название ключевого навыка
 schedule | object | График работы. Элемент справочника [schedule](dictionaries.md)
 schedule.id | string | Идентификатор графика работы
 schedule.name | string | Название графика работы
@@ -225,7 +225,7 @@ name | string | Название вакансии
 area | object | Регион размещения вакансии
 area.id | string | Идентификатор региона
 area.name | string | Название региона
-area.url | string | Url получения информации о регионе
+area.url | string | URL получения информации о регионе
 published_at | string | Дата и время публикации вакансии
 employer | object | Короткое представление работодателя. Описание полей смотрите в [информации о работодателе](employers.md#item)
 employer.blacklisted | boolean | Добавлены ли все вакансии работодателя в [список скрытых](blacklisted.md#employers)
@@ -234,7 +234,7 @@ type | object | Тип вакансии. Элемент справочника [
 type.id | string | Идентификатор типа вакансии
 type.name | string | Название типа вакансии
 response_url | string или null | На вакансии с типом `direct` нельзя откликнуться на сайте hh.ru, у этих вакансий в ключе `response_url` выдаётся URL внешнего сайта (чаще всего это сайт работодателя с формой отклика)
-test | object или null | Информация о прикрепленном тестовом задании к вакансии. В случае отсутствия теста — `null`. **В данный момент отклик на вакансии с обязательным тестом через API невозможен.**
+test | object или null | Информация о прикрепленном тестовом задании к вакансии. В случае отсутствия теста — `null`. **В данный момент отклик на вакансии с обязательным тестом через API невозможен**
 test.required | boolean | Обязательно ли заполнение теста для отклика
 specializations | array | Специализации. Элементы справочника [specializations](specializations.md)
 specializations[].id | string | Идентификатор специализации
